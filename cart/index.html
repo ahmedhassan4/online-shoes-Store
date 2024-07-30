@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/6d60548e6f.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cart.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- for discount-1 -->
+      <div class="discount">
+        <p>
+          Summer sale Discount Off <span>50%</span>! <a href="#">Shop Now</a>
+        </p>
+      </div>
+      <!-- for navbar -->
+      <nav>
+        <div
+          class="flex flex-row justify-between items-center w-full p-3 md:justify-between">
+          <div
+            class="left-menu hidden justify-center flex-row items-center w-2/3 md:flex">
+            <ul class="flex flex-row justify-center items-center">
+              
+              <li class="p-3 flex justify-center items-center">
+                <a
+                  class="p-3 underline-hover relative hover:text-slate-400  transition-transform duration-200"
+                  href="../products/"
+                  >Shop</a
+                >
+              </li>
+              <li class="p-3  flex justify-center items-center">
+                <a
+                  class="p-3 relative underline-hover hover:text-slate-400  transition-transform duration-200"
+                  href="../products/"
+                  >Men</a
+                >
+              </li>
+              <li class="p-3 flex justify-center items-center">
+                <a
+                  class="p-3 relative underline-hover hover:text-slate-400  transition-transform duration-200"
+                  href="../products/"
+                  >Women</a
+                >
+              </li>
+              <li class="p-3 flex justify-center items-center">
+                <a
+                  class="p-3 relative underline-hover hover:text-slate-400  transition-transform duration-200"
+                  href="../products/"
+                  >Kids</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="middle-menu flex flex-row justify-center items-center w-2/3">
+            <div class="logo-container w-32 md:w-52">
+              <a href="#">
+                <img
+                  class="w-full"
+                  src="../src/ama-high-resolution-logo-black-transparent.png"
+                  alt="ama-logo" />
+              </a>
+            </div>
+          </div>
+          <div class="right-menu w-2/3 flex justify-center items-center">
+            <ul class="flex justify-center items-center">
+              <li class="p-0 sm:p-3 hidden sm:flex">
+                <a class="p-3 hover:text-slate-400" href="#"
+                  ><i class="fa-solid fa-magnifying-glass"></i
+                ></a>
+              </li>
+              <li id="userName" class="p-0 sm:p-3 hidden sm:flex hover:text-slate-400">
+                <a class="p-3 hover:text-slate-400" href="../signIn/"
+                  ><i class="fa-regular fa-user"></i
+                ></a>
+                
+                <div class="dropdown-content-nav" id="dropdown"> 
+                <!-- <a id="logOut" href="#">Log Out</a> -->
+                 <a href="../signIn/">Sign In</a>
+                 <a href="../signUp/">Sign up</a>
+              </div>
+              </li>
+              <li class="p-0 sm:p-3">
+                <a
+                  class="p-3 hover:text-slate-400 relative inline-block"
+                  href="../wishList/">
+                  <i class="fa-regular fa-heart"></i>
+                  <span id="wishlist"
+                    class="absolute top-2 right-0 -mt-1 w-4 h-4 bg-black rounded-full flex items-center justify-center text-white text-xs"
+                    >0</span
+                  >
+                </a>
+              </li>
+              <li class="p-0 sm:p-3">
+                <a
+                  class="p-3 hover:text-slate-400 relative inline-block"
+                  href="../cart/">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span id="cartIcon"
+                    class="absolute top-2 right-0 -mt-1 w-4 h-4 bg-black rounded-full flex items-center justify-center text-white text-xs"
+                    >0</span
+                  >
+                </a>
+              </li>
+              <li
+                class="z-10 p-3 hover:scale-125 transition ease-in-out sm:flex md:hidden">
+                <a id="menu-button" class="p-3 z-10" href="#">
+                  
+                  <i class="fa-solid fa-bars z-10"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+       
+      </nav>
+      <div id="icon" class="hidden md:hidden" role="dialog" aria-modal="true">
+         
+        <div class="fixed inset-0 "></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto  bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+               
+                <img
+                class="w-1/4"
+                src="./src/ama-high-resolution-logo-black-transparent.png"
+                alt="ama-logo" />
+            </a>
+         
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+               
+                    <span id="userNameMobile" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" href="./signIn/"
+                      ><i class="fa-regular fa-user"></i
+                    ></span>
+                    
+                  
+                   
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Shop</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Women</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Men</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Kids</a>
+              </div>
+     
+        </div>
+    </header>
+    <!-- <section>
+      <div class="cart-page">
+        <div class="cart-data">
+          <div class="cart-items" id="cart-items"></div>
+          <div class="cart-checkout">
+            <div class="summary">Cart summary</div>
+            <div class="total">
+              <p>Subtotal</p>
+              <h2 id="cart-price">23,0000$</h2>
+            </div>
+            <div class="items-count">
+              <p id="quantity"><strong>Items:</strong> x3</p>
+            </div>
+            <div class="proceed">
+              <button id="toCheckOut">Proceed to Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section>
+      <div class="flex flex-col lg:flex-row gap-6 p-6">
+        <div class="flex-1 bg-card p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-bold mb-8 text-center p-4">Shopping Cart</h2>
+          <div class="flex justify-between items-center mb-4 w-full">
+            <span class="text-muted-foreground"></span>
+            <span class="text-muted-foreground">Product Details</span>
+            <span class="text-muted-foreground">Quantity</span>
+            <span class="text-muted-foreground">Total</span>
+          </div>
+          <div class="space-y-4" id="cart-items"></div>
+        </div>
+
+        <div
+          class="w-full lg:w-1/3 bg-card p-6 rounded-lg shadow-md justify-between items-center">
+          <h2 class="text-2xl font-bold mb-4">Order Summary</h2>
+          <div class="flex flex-col h-full justify-around">
+            <div class="flex justify-between text-lg font-semibold">
+              <span id="quantity">99 Items</span>
+              <span class="text-primary" id="cart-price">$485.00</span>
+            </div>
+
+            <button
+              id="toCheckOut"
+              class="w-full bg-black text-white p-4 rounded">
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-classes">
+          <div class="footer-class">
+            <img
+              src="../CSS/assets/ama-high-resolution-logo-black-transparent.png"
+              alt="" />
+          </div>
+          <div class="footer-class">© 2024 Copyright By AMA</div>
+          <div class="footer-class">
+            <ul>
+              <li><i class="fa-brands fa-facebook"></i></li>
+              <li><i class="fa-brands fa-square-instagram"></i></li>
+              <li><i class="fa-brands fa-x-twitter"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="cartList2.js"></script>
+    <script src="../src/navbar.js"></script>
+    <script src="../products/products.js"></script>
+    <!-- <script type="module" src="cartList.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/6d60548e6f.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="orders.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- for discount -->
+      <div class="discount">
+        <p>
+          Summer sale Discount Off <span>50%</span>! <a href="#">Shop Now</a>
+        </p>
+      </div>
+      <!-- for navbar -->
+      <nav>
+        <div class="navbar">
+          <div class="first-nav">
+            <img
+              src="../CSS/assets/ama-high-resolution-logo-black-transparent.png"
+              alt="" />
+          </div>
+          <div class="second-nav">
+            <ul>
+              <li><a href="../">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="../products/">Products</a></li>
+            </ul>
+            <img
+              src="../CSS/assets/ama-high-resolution-logo-black-transparent.png"
+              alt="" />
+            <ul>
+              <li><a href="../shoes/">Shoes</a></li>
+              <li><a href="#">Watches</a></li>
+              <div class="buy">
+                <li><a href="#">buy Now</a></li>
+              </div>
+            </ul>
+          </div>
+          <div class="third-nav">
+            <ul>
+              <li><i class="fa-solid fa-magnifying-glass"></i></li>
+              <li id="userName"><i class="fa-regular fa-circle-user"></i></li>
+              <li><i class="fa-regular fa-heart"></i></li>
+              <div class="cart">
+                <li>
+                  <a href="../cart/">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </li>
+                <div class="cart-notification" id="cartIcon">0</div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <div class="cart-page">
+        <div class="cart-data">
+          <div class="cart-items" id="cart-items">
+            <h1>My Orders</h1>
+
+            <!-- <div class="cart-item" id="cart-item">
+                        <div class="cart-body">s
+                            <div class="cart-details">
+                                <div class="cart-item-img">
+                                    <img src="${cartItems[i].image}" alt="" />
+                                </div>
+                                <div class="cart-item-details">
+                                    <h2>
+                                        ${cartItems[i].title}
+                                    </h2>
+                                    <strong>Date:</strong> 22-11-2023
+                                </div>
+                            </div>
+                            <div class="cart-price">${cartItems[i].price}$</div>
+                        </div>
+                        <div class="cart-add-remove">
+                            <button class="pending"> <i class="fa-solid fa-hourglass-end"></i> Pending</button>
+                            <button class="approved"> <i class="fa-regular fa-circle-check"></i> Approved</button>
+                            <button class="ready"><i class="fa-solid fa-truck-ramp-box"></i> Ready</button>
+                            <button class="delivered"><i class="fa-solid fa-truck"></i> Delivered</button>
+                        </div>
+                    </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="orders.js" type="module"></script>
+  </body>
+</html>

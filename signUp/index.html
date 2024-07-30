@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Open+Sans:wght@400;500;700;800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <header>
+      <div class="mail">
+        <i class="fa-solid fa-phone"></i>
+        <span>+0123456789</span>
+        <i class="fa-regular fa-envelope"></i>
+        <span>AMA@domain.com</span>
+      </div>
+      <span class="discount"
+        >Summer sale discount off<span style="color: red">50%</span>! Shop
+        Now</span
+      >
+      <div class="contry">
+        <span>Egypt</span>
+        <i class="fa-solid fa-earth-africa"></i>
+      </div>
+    </header>
+    <!-- nav -->
+    <nav>
+      <i class="fa-solid fa-user"></i>
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../products/">Shop</a></li>
+        <li><a href="../products/">Products</a></li>
+        <li><a href="../products/">Pages</a></li>
+        <img
+          class="logo"
+          src="../CSS/assets/ama-high-resolution-logo-black-transparent.png"
+          alt="" />
+        <li><a href="../products/">Elements</a></li>
+        <li><a href="../products/">Accessories</a></li>
+        <li><a href="../products/">Buy now</a></li>
+      </ul>
+      <div class="left-icon"></div>
+    </nav>
+    <!-- end nav -->
+    <main>
+      <div class="bg">
+        <div class="slide-container">
+          <div
+            class="slide active"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            "></div>
+
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            "></div>
+
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1475180098004-ca77a66827be?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            "></div>
+
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1566206091558-7f218b696731?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            "></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1597557314810-9963a48c188d?q=80&w=1943&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            "></div>
+
+          <div
+            class="slide"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1625204614387-6509254d5b02?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            "></div>
+        </div>
+      </div>
+
+      <div class="signin-form">
+        <h2>Sign Up</h2>
+        <div class="welcome">
+          <h4>Welcome <span>to our store</span></h4>
+          <a href="">Shop now</a>
+        </div>
+        <div class="sign-in-option">
+          <form class="sign-with-email" id="signupForm">
+            <div class="box">
+              <input type="text" id="f-name" required />
+              <label for="f-name">First Name</label>
+              <span class="error" id="f-name-error"></span>
+            </div>
+            <div class="box">
+              <input type="text" id="l-name" required />
+              <label for="l-name">Last Name</label>
+              <span class="error" id="l-name-error"></span>
+            </div>
+            <div class="box">
+              <input type="email" id="email" required />
+              <label for="email">Email</label>
+              <span class="error" id="email-error"></span>
+            </div>
+            <div class="box">
+              <input type="password" id="password" required />
+              <label for="password">Password</label>
+              <span class="error" id="password-error"></span>
+            </div>
+            <div class="box">
+              <input type="password" id="confirm-password" required />
+              <label for="confirm-password">Confirm Password</label>
+              <span class="error" id="confirm-password-error"></span>
+            </div>
+            <div class="register-btn">
+              <button type="submit">Sign Up</button>
+              <a href="#">Already have an account?</a>
+            </div>
+          </form>
+          <div class="sign-with-social">
+            <h3>Sign in with social media</h3>
+            <div class="social-signin">
+              <button type="button" class="facebook-btn">
+                <i class="fa-brands fa-facebook"></i>Sign in with Facebook
+              </button>
+              <button type="button" class="google-btn">
+                <i class="fa-brands fa-google"></i>Sign in with Google
+              </button>
+            </div>
+            <span>Don't have an account yet?</span>
+            <button type="button" class="signup-btn">
+              <i class="fa-solid fa-user-plus"></i>Sign up now
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="signUp.js"></script>
+  </body>
+</html>

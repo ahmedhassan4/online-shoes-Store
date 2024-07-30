@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  background-color: #faf9f8;
+  color: #222;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f6f8;
+  z-index: 5;
+  padding: 8px 20px;
+  font-size: 12px;
+}
+header .mail {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .contry {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .contry span {
+  padding-right: 20px;
+}
+/* ////////////////////////////end header///////////////////////////////// */
+
+/* ////////////////////////////start nav///////////////////////////////// */
+nav {
+  background-color: white;
+  z-index: 3;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav i {
+  font-size: 35px;
+  margin-left: 30px;
+  color: #b5670e;
+  width: 10%;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li {
+  margin-left: 40px;
+}
+nav ul li a {
+  color: #222;
+}
+nav div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 15%;
+  margin-right: 30px;
+}
+nav div i {
+  color: #222;
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* ////////////////////////////end nav///////////////////////////////// */
+
+main {
+  display: flex;
+  position: relative;
+  height: 100vh - 104.4px;
+}
+
+.bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 30vw;
+  overflow: hidden;
+  margin: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.slide-container {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  height: 60%;
+  width: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+
+  transition: 0.4s ease;
+  z-index: 2;
+}
+.slide.active {
+  opacity: 1;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 70vw;
+  margin-top: 5%;
+  padding-left: 100px;
+  position: relative;
+}
+.welcome {
+  position: absolute;
+  top: -50px;
+  right: 15%;
+}
+.welcome h4 {
+  font-size: 45px;
+  font-family: "Aboreto", cursive;
+  color: #222;
+}
+.welcome h4 span {
+  font-size: 50px;
+  font-family: "Amita", serif;
+  font-size: 25px;
+  font-weight: 300;
+  color: #5c5c5c;
+}
+.welcome a {
+  color: #b5670e;
+  text-decoration: underline;
+  font-size: 12px;
+}
+.signin-form h2 {
+  font-family: "Aboreto", cursive;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.signin-form h2::before {
+  content: "";
+  background-color: #dbdada;
+  width: 80%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* sign in  */
+
+.sign-in-option {
+  display: flex;
+}
+.sign-with-email {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-right: 20px;
+}
+.sign-with-email h3 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: "Aboreto", cursive;
+}
+
+.box {
+  position: relative;
+  margin-bottom: 30px;
+}
+.success {
+  color: green;
+}
+
+.box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #222;
+
+  border: none;
+  border-bottom: 1px solid #222;
+  outline: none;
+  background: transparent;
+}
+.box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #222;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box input:focus ~ label,
+.box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+.register-btn {
+  display: flex;
+  margin-top: 15px;
+}
+.register-btn button {
+  background-color: #222;
+  border: none;
+  color: white;
+  padding: 15px 60px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.register-btn button:hover {
+  background-color: #5c5c5c;
+}
+.register-btn a {
+  color: #222;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+/* sign in with social  */
+.sign-with-social {
+  margin-left: 40px;
+  position: relative;
+  padding-left: 40px;
+}
+.sign-with-social::before {
+  content: "";
+  background-color: #dbdada;
+  width: 2px;
+  height: 95%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.sign-with-social h3 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: "Aboreto", cursive;
+}
+
+.social-signin {
+  display: flex;
+  flex-direction: column;
+}
+.facebook-btn {
+  background-color: transparent;
+  padding: 13px 30px;
+  border: 1px solid #222;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.facebook-btn:hover {
+  background-color: #3b5998;
+}
+.facebook-btn:hover i {
+  color: white;
+}
+
+.google-btn {
+  margin-top: 26px;
+  background-color: transparent;
+  padding: 13px 30px;
+  border: 1px solid #222;
+  position: relative;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.google-btn:hover {
+  background-color: #f76119;
+}
+.google-btn:hover i {
+  color: white;
+}
+
+.facebook-btn i,
+.google-btn i {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 25px;
+}
+
+.facebook-btn i {
+  color: #3b5998;
+}
+.google-btn i {
+  color: #f76119;
+}
+
+.sign-with-social span {
+  color: #222;
+  font-size: 12px;
+  display: block;
+}
+
+.signup-btn {
+  margin-top: 26px;
+  background-color: transparent;
+  padding: 13px 20px 13px 60px;
+  border: 1px solid #222;
+  position: relative;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.signup-btn i {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 25px;
+  color: #6f6e6e;
+}
+
+/* /////////////////////////////////////////////// */
+.logo {
+  margin-left: 20px;
+  padding-left: 0px;
+  width: 100px;
+}

@@ -1,0 +1,79 @@
+[
+    {
+    "order_id": 1,
+    "customer_name": "mike",
+    "email":"mike@gmail.com",
+    "address": "45 hosry st. 6-october",
+    "date": "19/2/2024",
+    "total_cost": 970,
+    "method": "cash",
+    "status": "pending",
+    "notes":""
+    },
+    {
+    "order_id": 2,
+    "customer_name": "jane",
+    "email": "jane@example.com",
+    "address": "123 Main St, Anytown USA",
+    "date": "03/15/2024",
+    "total_cost": 399.99,
+    "method": "credit card",
+    "status": "complete",
+    "notes":""
+    },
+    {
+    "order_id": 3,
+    "customer_name": "david",
+    "email": "david@email.com",
+    "address": "567 Oak Rd, Smalltown CA",
+    "date": "07/01/2024",
+    "total_cost": 150.25,
+    "method": "PayPal",
+    "status": "pending",
+    "notes":""
+    },
+    {
+    "order_id": 4,
+    "customer_name": "sarah",
+    "email": "sarah@hotmail.com",
+    "address": "890 Pine Ave, Bigcity NY",
+    "date": "11/29/2024",
+    "total_cost": 599.99,
+    "method": "credit card",
+    "status": "complete",
+    "notes":""
+    },
+    {
+    "order_id": 5,
+    "customer_name": "tom",
+    "email": "tom@company.com",
+    "address": "321 Elm St, Middletown OR",
+    "date": "05/10/2024",
+    "total_cost": 75.00,
+    "method": "cash",
+    "status": "complete",
+    "notes":""
+    },
+    {
+    "order_id": 6,
+    "customer_name": "emily",
+    "email": "emily@gmail.com",
+    "address": "555 Oak Blvd, Smallville TX",
+    "date": "09/20/2024",
+    "total_cost": 249.99,
+    "method": "credit card",
+    "status": "canceled",
+    "notes":""
+    },
+    {
+    "order_id": 7,
+    "customer_name": "kevin",
+    "email": "kevin@email.net",
+    "address": "789 Maple Rd, Bigtown FL",
+    "date": "02/14/2024",
+    "total_cost": 450.00,
+    "method": "PayPal",
+    "status": "canceled",
+    "notes":""
+    }
+]

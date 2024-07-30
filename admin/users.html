@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Open+Sans:wght@400;500;700;800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./users/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Users</title>
+</head>
+<body>
+    <nav>
+        <img class="logo" src="assets/logo1.png" alt="logo">
+        <ul>
+            <li>
+                <img src="assets/inventory.svg" alt="">
+                <a href="admin.html">Inventory</a></li>
+            </li>
+            <li>
+                <img src="assets/customer.svg" alt="">
+                <a href="/users.html">Customers</a>
+            </li>
+            <li>
+                <img src="assets/credit.svg" alt="">
+                <a href="orders.html">Purchases</a>
+            </li>
+            
+            <li>
+                <img src="assets/dashboard.svg" alt="">
+                <a href="">Dashboard</a>
+            </li>
+            <li>
+                    
+                <a href="#" id="logOut">Logout</a>
+            </li>
+
+        </ul>
+        <div class="user">
+            <div class="circle-cover">
+                <img src="assets/profile.jpg" alt="Profile-image">
+            </div>
+            <span>Ahmed Hassan</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </nav>
+<!-- main -->
+<main>
+    <!-- left panel : show all user -->
+    <div class="users">
+        <!-- header -->
+        <div class="head">
+            <h2>Users</h2>
+            <div class="right-part">
+                <div class="sort-by">
+                    <button class="sort-btn">Sort by <i class="fa-solid fa-sliders"></i></button>
+                </div>
+                <ul class="sort-list hidden">
+                    <li><a href="" class="sort-by-default">default</a></li>
+                    <li><a href="" class="sort-by-name">Name</a></li>
+                    <li><a href="" class="sort-by-date">Date</a></li>
+                    <li><a href="" class="sort-by-role">Role</a></li>
+                </ul>
+                <div class="search-input">
+                    <input type="text" id="search" placeholder="Search Username...">
+                    <img src="assets/search.svg" alt="">
+                </div>
+                <!-- <button class="search-btn">Search</button>  -->
+            </div>
+        </div>
+
+        <div class="body">
+            <table class="user-data-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Picture</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="user-info-container">
+                    <!-- user Data -->
+                </tbody>
+            </table>
+
+            <div class="pagination-container">
+                <span class="entries">showing 1 to 10 of entries</span>
+                <div class="pagination">
+                    <!-- <button><i class="fa-solid fa-angle-left"></i>Prev</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>Next</button> -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- <table class="user-data-panel">
+            <tr class="user-data-header">
+                <th>Id</th>
+                <th>FULLNAME</th>
+                <th>ُEmail</th>
+                <th>Date</th>
+                <th>Role</th>
+                <th>Action</th>
+            </ul>
+        </div>  -->
+        
+        <!-- <div class="user-data-container">
+            <!-- js code  -->
+                <!-- <ul class="user-data-holder">
+                    <li>Id</li>
+                    <li>FULLNAME</li>
+                    <li>ُEmail</li>
+                    <li>Date</li>
+                    <li>Role</li>
+                    <li>
+                        <img src="assets/edit.svg" alt="">
+                        <img src="assets/delete.svg" alt="">
+                    </li>
+                </ul>
+        </div> --> 
+    </div>
+
+    <!-- Right panel : Add new user -->
+    <div class="add-user-panel">
+        <form action="#">
+            <h2>Add New User</h2>
+            <hr>
+            <div class="add-new-image-container">
+                <h3>Add Image</h3>
+                <img src="assets/errorImage.jpg" alt="profiile-image" class="add-new-user-image" id="add-new-user-image">
+                <input type="file" accept="image/jpg, image/png, image/jpg" id="upload-new-user-image" class="upload-new-user-image">
+                <label for="upload-new-user-image" class="upload-image-label">Upload Image</label>
+            </div>
+            <div class="new-user-data">
+
+                <label for="username">Username</label>
+                <input type="text" class="new-username-input" id="username">
+                
+                <label for="email">Email</label>
+                <input type="text" class="new-username-email" id="email">
+                <label for="password">Password</label>
+                <input type="text" class="new-username-password" id="password">
+                <label for="user-role">Role</label>
+                <select name="role" id="user-role" class="new-user-role">
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
+                <button type="submit" class="Add-new-user-btn">Add User</button> 
+            </div>
+        </form>
+    </div>
+</main>
+
+<div class="cover">
+    <div class="popup-card-update-user">
+        <div class="header">
+            <h2>Update User</h2>
+            <i class="fa-solid fa-xmark close-add-tap"></i>
+        </div>
+        <hr>
+        <div action="" class="update-user-form">
+            <div class="upload-updated-image-contanier">
+                <img src="assets/errorImage.jpg" alt="profiile-image" class="update-user-image" id="update-user-imag">
+                <input type="file" accept="image/jpg, image/png, image/jpeg" id="upload-updated-user-image" class="upload-updated-user-image">
+                <label for="upload-updated-user-image" class="upload-updated-image-label">Upload Image</label>
+            </div>
+            <label for="username">Username</label>
+            <input type="text" class="update-username-input" id="username">
+            <label for="email">Email</label>
+            <input type="text" class="update-email-input" id="email">
+            <label for="password">Password</label>
+            <input type="text" class="update-password-input" id="password">
+            <label for="user-role">Role</label>
+            <select name="role" id="update-user-role">
+                <option value="admin" name="admin">Admin</option>
+                <option value="user" name="user">User</option>
+            </select>
+            <button type="button" class="update-user-btn">update User</button>  
+        </div>
+    </div>
+</div>
+
+    
+    <script src="users/script.js"></script>
+    <script>
+        $(function(){
+            $('.close-add-tap').click(function(){
+                $('.cover').fadeOut()
+            })
+        })
+    </script>
+</body>
+</html>

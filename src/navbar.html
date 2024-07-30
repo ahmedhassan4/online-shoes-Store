@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7914afab88.js"
+      crossorigin="anonymous"></script>
+    <style>
+      .underline-hover::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 10%;
+        left: 50%;
+        background-color: currentColor;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+      .underline-hover:hover::before {
+        width: 100%;
+        left: 0;
+      }
+      .z-10 {
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div
+        class="flex flex-row justify-between items-center w-full p-3 md:justify-between">
+        <div
+          class="left-menu hidden justify-center flex-row items-center w-2/3 md:flex">
+          <ul class="flex flex-row justify-center items-center">
+            <li class="p-3 flex justify-center items-center">
+              <a
+                class="p-3 underline-hover relative hover:text-slate-400 transition-transform duration-200"
+                href="#"
+                >Shop</a
+              >
+            </li>
+            <li class="p-3 flex justify-center items-center">
+              <a
+                class="p-3 relative underline-hover hover:text-slate-400 transition-transform duration-200"
+                href="#"
+                >Men</a
+              >
+            </li>
+            <li class="p-3 flex justify-center items-center">
+              <a
+                class="p-3 relative underline-hover hover:text-slate-400 transition-transform duration-200"
+                href="#"
+                >Women</a
+              >
+            </li>
+            <li class="p-3 flex justify-center items-center">
+              <a
+                class="p-3 relative underline-hover hover:text-slate-400 transition-transform duration-200"
+                href="#"
+                >Kids</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="middle-menu flex flex-row justify-center items-center w-2/3">
+          <div class="logo-container w-32 md:w-52">
+            <a href="#">
+              <img
+                class="w-full"
+                src="../src/ama-high-resolution-logo-black-transparent.png"
+                alt="ama-logo" />
+            </a>
+          </div>
+        </div>
+        <div class="right-menu w-2/3 flex justify-center items-center">
+          <ul class="flex justify-center items-center">
+            <li class="p-0 sm:p-3 hidden sm:flex">
+              <a class="p-3 hover:text-slate-400" href="#"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+            </li>
+            <li class="p-0 sm:p-3 hidden sm:flex">
+              <a class="p-3 hover:text-slate-400" href="#"
+                ><i class="fa-regular fa-user"></i
+              ></a>
+            </li>
+            <li class="p-0 sm:p-3">
+              <a
+                class="p-3 hover:text-slate-400 relative inline-block"
+                href="#">
+                <i class="fa-regular fa-heart"></i>
+                <span
+                  class="absolute top-3 right-0 -mt-1 w-4 h-4 bg-black rounded-full flex items-center justify-center text-white text-xs"
+                  >0</span
+                >
+              </a>
+            </li>
+            <li class="p-0 sm:p-3">
+              <a
+                class="p-3 hover:text-slate-400 relative inline-block"
+                href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span
+                  class="absolute top-2 right-0 -mt-1 w-4 h-4 bg-black rounded-full flex items-center justify-center text-white text-xs"
+                  >0</span
+                >
+              </a>
+            </li>
+            <li
+              class="z-10 p-3 hover:scale-125 transition ease-in-out sm:flex md:hidden">
+              <a id="menu-button" class="p-3 z-10" href="#">
+                <i class="fa-solid fa-bars z-10"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="icon" class="hidden md:hidden" role="dialog" aria-modal="true">
+      <div class="fixed inset-0"></div>
+      <div
+        id="container"
+        class="fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <img
+              class="w-1/4"
+              src="ama-high-resolution-logo-black-transparent.png"
+              alt="ama-logo" />
+          </a>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a
+                href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >Shop</a
+              >
+              <a
+                href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >Women</a
+              >
+              <a
+                href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >Men</a
+              >
+              <a
+                href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >Kids</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- carsousel -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script></script>
+
+    <script src="../src/navbar.js"></script>
+  </body>
+</html>

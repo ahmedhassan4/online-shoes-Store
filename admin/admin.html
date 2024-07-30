@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Open+Sans:wght@400;500;700;800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Admin</title>
+</head>
+<body>
+    
+    <nav>
+            <img class="logo" src="assets/logo1.png" alt="logo">
+            <ul>
+                <li>
+                    <img src="assets/inventory.svg" alt="">
+                    <a href="" class="nav-link">Inventory</a></li>
+                </li>
+                <li>
+                    <img src="assets/customer.svg" alt="">
+                    <a href="./users.html" class="nav-link">Customers</a>
+                </li>
+                <li>
+                    <img src="assets/credit.svg" alt="">
+                    <a href="orders.html">Purchases</a>
+                </li>
+                
+                <li>
+                    <img src="assets/dashboard.svg" alt="">
+                    <a href="">Dashboard</a>
+                </li>
+                <li>
+                    
+                    <a href="#" id="logOut">Logout</a>
+                </li>
+
+            </ul>
+        <div class="user">
+            <div class="circle-cover">
+                <img src="assets/profile.jpg" alt="Profile-image">
+            </div>
+            <span>Ahmed Hassan</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </nav>
+
+
+    <!-- main -->
+     <main>
+        <div class="products">
+            <!-- header -->
+            <div class="head">
+                <h2>Products</h2>
+                <div class="right-part">
+                    <div class="search">
+                        <input type="text" id="search" placeholder="Search product..." class="search-product-input">
+                        <img src="assets/search.svg" alt="">
+                    </div>
+                    <div class="add-product">
+                        <button class="main-Add-new-product">Add New Product <i class="fa-solid fa-plus"></i></button>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- nav -->
+            <div class="navigation-products">
+                <ul class="nav-bar">
+                    <li><button class="btn active all-products">All products</button></li>
+                    <li><button class="btn">Most purhcase</button></li>
+                    <li><button class="btn get-shoes-btn">Shoes</button></li>
+                    <li><button class="btn get-tshirt-btn">T-shirts</button></li>
+                    <li><button class="btn">offers</button></li>
+                </ul>
+
+                <button class="sort-btn">Sort by <i class="fa-solid fa-sliders"></i></button>
+                <div class="sort-list-container hidden">
+                    <ul class="sort-list ">
+                        <li><a href="#" class="sort-by-default">default</a></li>
+                        <li><a href="#" class="sort-by-name">Name</a></li>
+                        <li><a href="#" class="sort-by-price">Price</a></li>
+                        <li><a href="#" class="sort-by-gender">Gender</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- product-cards -->
+             <div class="product-cards">       
+             </div>
+        </div>
+<!-- edit-info -->
+        <div class="edit-info">
+            <h2>Edit Products</h2>
+            <ul>
+                <li><button class="tab-button active">Item</button></li>
+                <li><button class="tab-button">Inventory</button></li>
+                <li><button class="tab-button">Reviews</button></li>
+            </ul>
+            <div class="tabs">
+                <div class="content active">
+                    <div class="edit-info-img-container">
+                        <img src="./assets/errorImage.jpg" class="edit-info-img">
+                    </div>
+                    <div class="description">
+                        <div class="product-name">
+                            <span>Product Name</span>
+                            <input type="hidden" class="product-id-edit">
+                            <input type="text" class="product-name-edit">
+                        </div>
+                        <div class="category">
+                            <span>Product Category</span>
+                            <input type="text" class="product-category-edit">
+                        </div>
+                        <div class="price">
+                            <span>Product Price</span>
+                            <input type="number" class="price-category-edit">
+                        </div>
+                    </div>
+                    <div class="selection">
+                        <div class="gender">
+                            <span>gender</span>
+                            <div class="gender-radio-container">
+                                <label class="container-radio">Men
+                                    <input type="radio" checked="checked" name="gender" value="male">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-radio">Women
+                                    <input type="radio" name="gender" value="female">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="color">
+                            <span>color</span>
+                            <div class="color-checkbox-container">
+                                <!-- <label class="container-checkbox">black
+                                    <span class="color-show"></span>
+                                    <input type="checkbox" checked="checked" name="color" value="red">
+                                    <span class="checkmark"></span> 
+                                </label> -->
+                                <!-- <label class="container-checkbox">red
+                                    <span class="color-show"></span>
+                                    <input type="checkbox" name="color" value="black">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-checkbox">blue
+                                    <span class="color-show"></span>
+                                    <input type="checkbox" name="color" value="blue">
+                                    <span class="checkmark"></span>
+                                </label> -->
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="color">
+                            <span>Size</span>
+                            <div class="size-checkbox-container">
+                                <!-- <label class="container-checkbox">4
+                                    <input type="checkbox" checked="checked" name="size" value="4">
+                                    <span class="checkmark"></span> 
+                                </label>
+                                <label class="container-checkbox">4.5
+                                    <input type="checkbox" name="size" value="4.5">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-checkbox">5
+                                    <input type="checkbox" name="size" value="5">
+                                    <span class="checkmark"></span>
+                                </label> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="inventory">
+                        <div class="inventory-stock">
+                            <div class="in-stock">
+                                <span>Product QTY</span>
+                                <!-- <input type="hidden" class="product-id-edit"> -->
+                                <input type="number" class="product-qty-edit">
+                            </div>
+                            <div class="location">
+                                <span>Product Location</span>
+                                <input type="text" class="product-location-edit">
+                            </div>
+                            <div class="buy-price">
+                                <span>Product Buy Price</span>
+                                <input type="number" class="buy-price-edit">
+                            </div>
+                        </div>
+
+                        <div class="related-image">
+                            <h3>Related Products</h3>
+                            <div class="img-container">
+                                <!-- js -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <h1>reviews</h1>
+                </div>
+            </div>
+
+            <div class="edit-buttons">
+                <button class="remove-product">Remove</button>
+                <button class="update-image-btn">Update Product</button>
+            </div>
+        </div>
+
+     </main>
+     <!-- add new product -->
+     <div class="cover">
+        <div class="popup-card">
+            <i class="fa-solid fa-xmark close-add-tap"></i>
+            <h2>Add New Product</h2>
+            <div class="add-new-product">
+                <div class="left">
+                    <h3>Description</h3>
+                    <div class="description">
+                        <div class="product-name">
+                            <span>Product Name</span>
+                            <input type="text" class="product-name-edit add-new-product-name">
+                        </div>
+                        <div class="product-description">
+                            <span>Description</span>
+                            <textarea name="product-description-edit" id="product-description-edit" class="product-description-edit add-new-product-description"></textarea>
+                        </div>
+                    </div>
+                    <!-- category -->
+                    <h3 class="category-header">category</h3>
+                    <div class="category">
+                            <span>Product Category</span>
+                            <input type="text" class="product-category-edit add-new-product-category">
+                    </div>
+                </div>
+                <!-- Price -->
+                <div class="right">
+                    <h3>Image</h3>
+                    <img src="assets/errorImage.jpg" alt="asd" class="edit-info-img" id="add-product-image">
+                    <input type="file" accept="image/jpg, image/png, image/jpg" id="update-image" class="add-new-product-image">
+                    <label for="update-image">Update Image</label>
+                    <h3>Price</h3>
+                    <div class="price">
+                            <span>Product Price</span>
+                            <input type="text" class="price-category-edit add-new-product-price">
+                    </div>
+                    
+                    </div>
+                    </div>
+                <button class="Add-new-product-btn">Add Product</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        $(function(){
+            $('.main-Add-new-product').click(function(){
+                    $('.cover').fadeIn().css('display', 'flex')
+            })
+        })
+        $(function(){
+            $('.close-add-tap').click(function(){
+                $('.cover').fadeOut()
+            })
+        })
+        $(function(){
+            $('.Add-new-product-btn').click(function(){
+                $('.cover').fadeOut()
+            })
+        }) 
+    </script>
+        
+</body>
+</html>
